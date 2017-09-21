@@ -88,7 +88,7 @@ public class Main {
         students.add(student4);
         students.add(student5);
 
-        hmapForTeacher.put("Tj", "JavaTeacher");
+        hmapForTeacher.put(teacher3, studentsGroup3);
 ///HashSet
 
         studentsGroup2.add(student6);
@@ -97,7 +97,7 @@ public class Main {
         studentsGroup2.add(student9);
         studentsGroup2.add(student10);
 
-        hmapForTeacher.put("Robbie", "Dore");
+        hmapForTeacher.put(teacher2, studentsGroup2);
 ///HashSet
 
         studentsGroup3.add(student11);
@@ -110,6 +110,31 @@ public class Main {
 
 
         System.out.println("System End");
+
+
+                //Print out the map keys in a for loop (use the keySet() method).
+                //Print out the map values in a for loop (use the values() method).
+
+        //write a for each to go through the key in this : HashMap<Teacher, Set<Student>> hmapForTeacher = new HashMap<>();
+
+
+        for (Teacher teach: hmapForTeacher.keySet()) {
+             System.out.println("This teacher is: " + teach.firstName + " " + teach.lastName  );
+                
+        }
+
+        for ( Set<Student> studious : hmapForTeacher.values()) {  ///studious variable name just represents the set of students "Set<Students";
+//            System.out.println("This is : " + studious);
+
+            for (Student studying: studious) {
+            System.out.println("This student is: " + studying.firstName + " " + studying.lastName );
+            }
+        }
+
+
+        System.out.println(hmapForTeacher.keySet()); /// this method doeesn't need anything to be passed into it.
+
+
 
     }
 
